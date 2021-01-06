@@ -3,7 +3,7 @@ Plug 'luochen1990/rainbow'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'plasticboy/vim-markdown'
 Plug 'https://github.com/aonemd/kuroi.vim.git'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': [ 'markdown', 'vim-plug' ]}
 Plug 'junegunn/limelight.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
