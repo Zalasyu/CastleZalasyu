@@ -1,9 +1,9 @@
 call plug#begin ('~/.vim/plugged')
 Plug 'luochen1990/rainbow'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'plasticboy/vim-markdown'
+Plug 'scrooloose/nerdtree'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown'}
 Plug 'https://github.com/aonemd/kuroi.vim.git'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': [ 'markdown', 'vim-plug' ]}
 Plug 'junegunn/limelight.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
@@ -51,10 +51,17 @@ colorscheme kuroi
 " ALE Config
 let g:ale_sign_column_always = 1
 
-" tpope/Plasticboy Settings
-autocmd FileType markdown set concealLevel = 0
-autocmd FileType markdown normal zR
+if has('autocmd')
+	" Treat all .md files as markdown
+	autocmd BufNewFile,BufRead *.md set filetype=markdown
 
+	" tpope/Plasticboy Settings
+	autocmd FileType markdown set concealLevel = 0
+	autocmd FileType markdown normal zR
+
+	" Set spell check to British English
+	autocmd FileType markdown setlocal spell spelllang=en_gb
+endif
 
 " set to 1, the vim will refresh markdown when save the buffer or
 " " leave from insert mode, default 0 is auto refresh markdown as you edit or
@@ -71,11 +78,6 @@ let g:mkdp_command_for_global = 1
 " " by default, the server listens on localhost (127.0.0.1)
 " " default: 0
 let g:mkdp_open_to_the_world = 1
-
-
-" Disable error bells
-set noerrorbells visualbell t_vb=
-autocmd GUIEnter * set visualbell t_vb=
 
 "Remap the ESC key to normal mode
 :imap ;; <Esc>
