@@ -1,8 +1,10 @@
 call plug#begin ('~/.vim/plugged')
 Plug 'luochen1990/rainbow'
 Plug 'scrooloose/nerdtree'
+Plug 'mattn/emmet-vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 Plug 'https://github.com/aonemd/kuroi.vim.git'
 Plug 'junegunn/limelight.vim'
 Plug 'airblade/vim-gitgutter'
@@ -51,6 +53,9 @@ colorscheme kuroi
 " ALE Config
 let g:ale_sign_column_always = 1
 
+" YCM Config Preview Window Autoclose
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " tpope/Plasticboy Settings
 autocmd FileType *.markdown, *.md set concealLevel = 0
@@ -65,3 +70,7 @@ autocmd GUIEnter * set visualbell t_vb=
 
 "Remap the ESC key to normal mode
 :imap ;; <Esc>
+
+"Cold Folding Settings
+set foldmethod=indent
+
