@@ -1,7 +1,6 @@
 call plug#begin ('~/.vim/plugged')
 Plug 'luochen1990/rainbow'
 Plug 'scrooloose/nerdtree'
-Plug 'mattn/emmet-vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
