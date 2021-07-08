@@ -73,3 +73,12 @@ autocmd GUIEnter * set visualbell t_vb=
 "Cold Folding Settings
 set foldmethod=indent
 
+"Vim Splits Navigations Remap
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+"Vim Split Behaviour Config
+set splitbelow
+set splitright
