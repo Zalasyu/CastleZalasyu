@@ -1,6 +1,7 @@
 call plug#begin ('~/.vim/plugged')
 Plug 'luochen1990/rainbow'
 Plug 'scrooloose/nerdtree'
+Plug 'mattn/emmet-vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
@@ -51,6 +52,7 @@ colorscheme kuroi
 
 " ALE Config
 let g:ale_sign_column_always = 1
+let b:ale_linters = ['mypy']
 
 " YCM Config Preview Window Autoclose
 let g:ycm_autoclose_preview_window_after_completion = 1
