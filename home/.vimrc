@@ -52,7 +52,9 @@ colorscheme kuroi
 
 " ALE Config
 let g:ale_sign_column_always = 1
-let b:ale_linters = ['mypy']
+let b:ale_linters = {'javascript': ['eslint'], 'python': ['flake8', 'pydocstyle', 'bandit', 'mypy']}
+let g:ale_fixers = {'*':[], 'python':['black', 'isort']}
+let g:ale_fix_on_save = 1
 
 " YCM Config Preview Window Autoclose
 let g:ycm_autoclose_preview_window_after_completion = 1
@@ -84,3 +86,9 @@ nnoremap <C-H> <C-W><C-H>
 "Vim Split Behaviour Config
 set splitbelow
 set splitright
+
+"Emmet Shortcuts
+let g:user_emmet_mode='n'
+let g:user_emmet_leader_key=','
+
+
