@@ -91,4 +91,6 @@ set splitright
 let g:user_emmet_mode='n'
 let g:user_emmet_leader_key=','
 
+"Automatic Insertion of headers
+au BufNewFile *.py 0r ~/.vim/headers_templates/py_headers.template
 
